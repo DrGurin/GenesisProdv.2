@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'SF';
+    src: url('./fonts/sf-ui-display-thin.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avantgard';
+    src: url('./fonts/avantgardegothicc-bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avantgard';
+    src: url('./fonts/AvantGardeGothicC-Demi.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avantgard';
+    src: url('./fonts/AvantGardeLT-BookOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
