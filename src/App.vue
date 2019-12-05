@@ -150,7 +150,9 @@
           </div>
         </div>
         <div class="map">
+          <div class="mapContainer">
             <img src="./assets/images/maps.png" alt="map" class="map-image">
+          </div>
         </div>
       </div>
     
@@ -335,9 +337,7 @@ export default {
       // ANIMATIONS FOR STEPS (FOURTH BLOCK)
           // FOR TITLE 
               this.stepsTitle = this.$el.querySelector(".steps_title").getBoundingClientRect();
-                  if(this.stepsTitle.top < window.innerHeight && this.stepsTitle.bottom >= 0) {
-                      console.log('ZAGOLOVOK',this.stepsTitle);
-                  }
+                  
           // THE END FOR TITLE 
 
           // FOR CARD'S IMAGES 
@@ -462,6 +462,12 @@ body{
   width: 150px;
   height: auto;
   margin-left: 10%;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 // ALL ANIMATIONS
 
@@ -1604,20 +1610,21 @@ body{
 // THE END STYLES FOR FIVTH BLOCK WITH INPUT 
 
 // STYLES FOR SIXTH BLOCK FOOTER
-    #app .footer {
+      #app .footer {
         display: flex;
         height: 100%;
         max-height: 775px;
         width: 100%;
+        max-width: 2000px;
         background-color: #ed5050;
         position: relative;
-        padding-bottom: 0px;
       }
-    .leftSide {
+      .leftSide {
         display: flex;
         width: 50%;
         max-width: 100%;
         height: 100%;
+        max-height: 665px;
       }
       .leftSide-Container {
         display: flex;
@@ -1659,11 +1666,26 @@ body{
       .map {
         width: 50%;
         height: 100%;
-        display: flex;
+        display: flex; 
       }
       .map-image {
         width: 100%;
         height: 100%;
+      }
+      
+      
+      @media screen and (min-width: 1031px) {
+        .mapContainer {
+          max-height: 665px;
+          width: 80%;
+          height: 80%;
+        }
+        .map-image {
+          width: 100%;
+          height: 100%;
+          max-width: 755px;
+          max-height: 665px;
+        }
       }
       @media screen and (max-width: 700px) {
         .leftSide-Container {
@@ -2165,5 +2187,8 @@ body{
       .logo{
           width: 100px;
         }
+    }
+    .steps_schema_picture{
+      margin-top: 50px;
     }
 </style>
